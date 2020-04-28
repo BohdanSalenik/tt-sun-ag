@@ -5,7 +5,7 @@
       <span>ID: {{block.id}}
       </span>
     </h1>  
-    <img :src="path(block.img)" :alt="block.title" class="mb20">
+    <img :src="path(block.img)" :alt="block.title" class="mb20 img">
     <button type="button" @click="goHome">
       Back
     </button>
@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  img {
+    width: 100%;
+  }
   .mb20 {
     margin-bottom: 20px;
   }

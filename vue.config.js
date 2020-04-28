@@ -8,10 +8,6 @@ module.exports = {
         `
       }
     }
-  }
-};
-
-
-module.exports = {
-  publicPath: "/my-first-project/"
+  },
+  publicPath: "/tt-sun-ag/"
 };
