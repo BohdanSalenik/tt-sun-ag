@@ -1,0 +1,8 @@
+.footer {
+  display: flex;
+  height: 263px;
+  background: #292839;
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
+}

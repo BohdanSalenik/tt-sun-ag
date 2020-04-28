@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Prata|Roboto:300&display=swap');
+
+// font-family: 'Roboto', sans-serif; 300
+// font-family: 'Prata', serif; 400
+// font-family: 'Montserrat', sans-serif; 400 700
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(90deg, #FAFAFA 0%, #F2F2F2 100%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+p, h1, h2, h3, h4, h5, span, li {
+  cursor: default;
+}
+
+a, button {
+  cursor: pointer;
+}

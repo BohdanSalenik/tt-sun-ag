@@ -1,0 +1,68 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  &--info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+    @media screen and (max-width: 450px) {
+      margin-bottom: 38px;
+    }
+    &__address {
+      max-width: 137px;
+      @media screen and (max-width: 450px) {
+        margin-bottom: 14px;
+      }
+    }
+
+    &__client {
+      max-width: 170px;
+    }
+
+    &__heading {
+      display: flex;
+      align-items: baseline;
+    }
+
+    
+    @media screen and (max-width: 450px) {
+      flex-wrap: wrap;
+      
+    }
+  }
+  &--project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding: 60px;
+  }
+  &--pagination {
+    display: flex;
+    justify-content: center;
+  }
+  &--contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+    linear-gradient(237.99deg, rgba(0, 115, 164, 0.4) 0%,
+       rgba(0, 17, 105, 0.4) 100%), 
+    url('../assets/contactFormBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 288px;
+  }
+  &--footer {
+    width: 100%;
+    padding-top: 51px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &--footerM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

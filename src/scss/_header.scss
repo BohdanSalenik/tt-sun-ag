@@ -1,0 +1,156 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  height: 60px;
+  padding: 0 30px;
+
+  @media screen and (max-width: 450px) {
+    padding: 0 20px;
+  }
+
+  &__block {
+    display: flex;
+    &--logo {
+      width: 222px;
+      justify-content: space-between;
+
+      @media screen and (max-width: 450px) {
+        width: 245px;
+      }
+    }
+  }
+
+  &__burger {
+    background: url('../assets/burger.svg') no-repeat center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      fill: red;
+    }
+  }
+
+  &__logo {
+    display: block;
+    cursor: pointer;
+  }
+  &__img {
+    display: block;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 25px;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+    linear-gradient(237.99deg, rgba(0, 115, 164, 0.4) 0%,
+       rgba(0, 17, 105, 0.4) 100%), 
+    url('../assets/headerBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+
+    @media screen and (max-width: 450px) {
+      padding: 0 20px;
+    }
+  }
+  &__title {
+   @include textStyle($prata, $fzH1, $fwNormal, $lightText);
+   line-height: 100%;
+   letter-spacing: -0.02em;
+   text-align: center;
+   margin-bottom: 19px;
+
+   @media screen and (max-width: 450px) {
+    @include textStyle($prata, 40px, $fwNormal, $lightText);
+    margin-bottom: 32px;
+  }
+
+  }
+  &__description {
+    @include textStyle($montserat, $fzP7Reg, $fwNormal, $lightText);
+    text-align: center;
+    line-height: 150%;
+
+    max-width: 765px;
+    margin-bottom: 128px;
+
+    @media screen and (max-width: 450px) {
+      @include textStyle($montserat, 12px, $fwNormal, $lightText);
+      margin-bottom: 32px;
+    }
+  }
+  &__works {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #56CCF2;
+    padding: 16px 0 0 0;
+    width: 700px;
+    @media screen and (max-width: 450px) {
+      width: 320px;
+      border-top: 2px solid rgba(119, 160, 226, 0.55);
+      padding: 12px 0 0 0;
+    }
+  }
+  &__subtitle {
+    @include textStyle($montserat, 24px, $fwBold, $lightText);
+    text-transform: uppercase;
+
+    @media screen and (max-width: 450px) {
+      @include textStyle($montserat, 12px, $fwBold, $lightText);
+    }
+  }
+  &__arrowDown {
+    position: absolute;
+    background: url('../assets/circleArrow.svg') no-repeat center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollDown 1.5s linear infinite;
+  }
+}
+.lang {
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
+  & span {
+    @include textStyle($montserat, $fzP8Reg, $fwBold, $lightText);
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    margin-right: 5px;
+  }
+}
+
+@keyframes scrollDown {
+  10% { transform: translate(-50%, -10px); }   
+  70% { transform: translate(-50%, 0);  }
+ }

@@ -1,0 +1,57 @@
+.main {
+  padding: 85px 0 146.5px;
+  @media screen and (max-width: 450px) {
+    padding: 0;
+  }
+}
+
+.projects {
+ 
+  &-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    @media screen and (max-width: 450px) {
+      margin-bottom: 52px;
+      padding-left: 33px;
+    }
+  }
+  &__title {
+    @include textStyle($montserat, $fzH2, $fwBold, $darkText);
+    line-height: 37px;
+    text-transform: uppercase;
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+  }
+  &__filters {
+    display: flex;
+  }
+  &__btn {
+    position: relative;
+    margin-right: 33px;
+
+    @include textStyle($montserat, $fzP6Reg, $fwBold, $darkText);
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &--active::after {
+      position: absolute;
+      margin-top: -2px;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #56CCF2;
+    }
+    @media screen and (max-width: 450px) {
+      @include textStyle($montserat, $fzP7Reg, $fwBold, $darkText);
+      line-height: 150%;
+    }
+  }
+}

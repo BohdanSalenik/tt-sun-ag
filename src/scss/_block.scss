@@ -1,0 +1,237 @@
+.block {
+  display: flex;
+  margin-bottom: 70px;
+
+  @media screen and (max-width: 450px) {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+}
+.block-left {
+  @media screen and (max-width: 450px) {
+
+  }
+  &__img-section {
+    position: relative;
+    width: 100%;
+  }
+  &__strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 100%;
+    color: $lightText;
+    &--green {
+      background-color: rgba(111, 207, 151, 0.6);
+    }
+    &--blue {
+      background: rgba(119, 160, 226, 0.6);
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background: #fff;
+
+    @media screen and (max-width: 450px) {
+      padding: 63px 59px 36px;
+    }
+  }
+}
+
+.block-right {
+  @media screen and (max-width: 450px) {
+    flex-direction: column-reverse;
+  }
+  &__img-section {
+    position: relative;
+    width: 100%;
+  }
+  &__strip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 100%;
+    &--green {
+      background-color: rgba(111, 207, 151, 0.6);
+    }
+    &--blue {
+      background: rgba(119, 160, 226, 0.6);
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background: #fff;
+
+    @media screen and (max-width: 450px) {
+      padding: 63px 59px 36px;
+    }
+  }
+}
+
+.rotate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.rotate-down {
+  transform: translateX(-50%) translateY(-50%) rotate(90deg)
+}
+
+
+.contacts-info {
+  max-width: 454px;
+  &__title {
+    @include textStyle($montserat, $fzH2, $fwBold, $darkText);
+    line-height: 126%;
+    text-transform: uppercase;
+
+    margin-bottom: 27px;
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 12px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+
+    &--text {
+      max-width: 137px;
+    }
+  }
+  &__address,  &__client{
+    @include textStyle($montserat, $fzP6Reg, $fwSemiBold, $darkText);
+    line-height: 20px;
+
+    margin-left: 5.5px;
+    margin-bottom: 9px;
+    
+  }
+  &__text {
+    @include textStyle($montserat, $fzP8Reg, $fwNormal, $darkText);
+    line-height: 15px;
+
+    display: block;
+  }
+  &__btn {
+    @include textStyle($montserat, $fzP9Reg, $fwBold, $darkText);
+    line-height: 12px;
+    text-transform: uppercase;
+
+    padding: 14px 50px;
+    border-radius: 50px;
+
+    &--green {
+      border: 2px solid #6FCF97;
+      color: #6FCF97;
+      @media screen and (max-width: 450px) {
+        border: none;
+        background-color: #6FCF97;
+        color: $lightText;
+      }
+    }
+    &--blue {
+      border: 2px solid #77A0E2;
+      color: #77A0E2;
+      @media screen and (max-width: 450px) {
+        border: none;
+        background-color: #77A0E2;
+        color: $lightText;
+      }
+    }
+  }
+}
+
+.button--green {
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      z-index: -2;
+  }
+  &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: rgba(111, 207, 151, 0.6);
+      transition: all .3s;
+      z-index: -1;
+  }
+  &:hover {
+      color: #fff;
+      &:before {
+          width: 100%;
+      }
+  }
+}
+
+.button--blue {
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      z-index: -2;
+  }
+  &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: rgba(119, 160, 226, 0.6);
+      transition: all .3s;
+      z-index: -1;
+  }
+  &:hover {
+      color: #fff;
+      &:before {
+          width: 100%;
+      }
+  }
+}
